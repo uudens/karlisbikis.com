@@ -1,0 +1,297 @@
+@import nib
+
+small = 545px
+mid = 645px
+
+@font-face
+  font-family: 'BebasNeue';
+  src: url('../fonts/BebasNeue.eot');
+  src: url('../fonts/BebasNeue.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/BebasNeue.svg#font') format('svg'),
+  url('../fonts/BebasNeue.ttf') format('truetype'),
+  url('../fonts/BebasNeue.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+
+html
+  font-family: Helvetica, Arial, sans-serif
+  font-size: 62.5%
+  color: black
+
+  @media (max-width: mid)
+    font-size: 56%
+
+body
+  font-size: 1.6rem
+
+a
+  text-decoration: none
+  color: black
+
+  &:hover, &:visited, &:active
+    color: black
+
+p
+  line-height: 2.2rem;
+
+ul, ol
+  padding: 0
+  margin: 0
+
+h1, h3
+  font-family: 'BebasNeue'
+  font-size: 6.4rem
+
+h1
+  margin-top: 0;
+  letter-spacing: -0.1rem;
+  text-align: left;
+
+  span
+    font-size: 3.5rem
+    color: #ff6c00
+    display: block;
+    margin-top: -1.9rem;
+
+.container
+  border-top: 0.7rem solid #ff6c00;
+  min-width: 290px;
+
+header
+  text-align: center
+  margin: 4.9rem 0
+  margin-bottom: 5.9rem
+
+  > div
+    display: inline-block
+    vertical-align: top
+    margin: 0 1.1rem
+
+  @media (max-width: small)
+    margin-top: 2rem;
+
+.floatingHeader
+  position: fixed
+  top: 0
+  visibility: hidden
+
+.avatar
+  width: 19.5rem
+  height: 19.5rem
+  background-image: url('../img/profile.jpg')
+  background-size: cover
+
+  a
+    display: block;
+    width: 100%;
+    height: 100%;
+
+.about
+  text-align: left
+  padding-top: 3.6rem;
+
+  > *
+    display: inline-block;
+
+  p
+    width: 34.0rem;
+    vertical-align: top;
+    margin-top: 0.9rem
+    margin-left: 1rem
+
+  @media (max-width: small)
+    padding-top: 1.6rem;
+
+    .title
+      margin: auto;
+      display: block;
+      text-align: center;
+
+    h1
+      text-align: center;
+      margin-bottom: 1rem;
+
+    .social
+      margin-top: 0;
+      margin-bottom: 1rem;
+
+    p
+      width: auto;
+      padding: 0 6%;
+      text-align: justify;
+
+.social
+  margin-top: -4.6rem
+  display: block;
+
+  li
+    background-color: #939393
+    width: 2.3rem
+    height: 2.5rem
+    line-height: 2.5rem
+    display: inline-block
+    text-align: center
+    background-repeat: no-repeat
+    background-position: center
+    text-indent: -9999px
+    transition: background-color 0.2s
+    margin-right: 0.4rem
+    background-size: 67%
+
+    &:hover
+      background-color: darken(#939393, 100%)
+
+    a
+      display: block
+      width: 100%
+      height: 100%
+
+    &.facebook
+      background-image: url('../img/icons/facebook.png')
+      background-position: right bottom
+      background-size: auto
+
+    &.twitter
+      background-size: 82%
+      background-image: url('../img/icons/twitter.png')
+
+    &.linkedin
+      background-image: url('../img/icons/linkedin.png')
+
+    &.direct
+      background-image: url('../img/icons/direct.png')
+
+h2
+  text-align: center
+  background-color: lightgrey
+  padding: 1rem
+  margin: 0
+
+main
+  position: relative
+
+.floating-message
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  background-image: url('../img/icons/arrow.png')
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 13%;
+  font-size: 1.1rem;
+  padding-right: 1.5rem;
+  margin: 0.4rem;
+  opacity: 1;
+  transition: opacity 0.5s
+
+  &.hidden
+    opacity: 0;
+
+.projects
+  ul
+    height: 100%;
+
+  > li
+    width: 100%
+    overflow-y: hidden
+    overflow-x: scroll
+    -webkit-overflow-scrolling: touch
+    height: 30.0rem
+    padding-bottom: 2.5rem
+    padding-top: 1.3rem
+
+.project
+  white-space: nowrap
+
+  li
+    width: 30.0rem
+    height: 100%
+    display: inline-block
+    vertical-align: top
+    box-sizing: border-box
+    background-image: url('../img/preloader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 0.5rem;
+
+    &:hover
+      cursor: pointer
+
+    &.without-external-link:hover
+      cursor: initial
+
+    &.text
+      padding: 0;
+      border: 0.4rem solid #ff6c00;
+      background-image: none;
+
+      p a
+        color: #696969
+
+      &:hover
+        a
+          color: lighten(#000000, 30%)
+
+        p
+          color: black
+
+        hr
+          width: 55%
+
+    &:first-child
+      margin-left: 1rem;
+
+    &:last-child
+      margin-right: 1rem;
+
+    > a
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+  h3
+    height: 47%;
+    margin: 0;
+    vertical-align: bottom;
+    font-size: 4.4rem;
+    text-align: center;
+    letter-spacing: -1px;
+    transition: color 0.4s
+
+    &:before
+      content: '\00a0';
+      display: inline-block;
+      height: 100%;
+      width: 1px;
+      width: 0px;
+      vertical-align: bottom;
+      overflow: hidden;
+      padding-top: 1rem
+
+    a
+      transition: color 0.4s;
+
+  hr
+    border: 0;
+    border-top: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1.1rem;
+    display: block;
+    transition: width 0.4s
+
+  p
+    margin: 0;
+    margin-top: 0.7rem;
+    padding: 0 3.3rem;
+    box-sizing: border-box;
+    white-space: normal;
+    text-align: center;
+    line-height: 2.0rem;
+
+/* Hide toolbar for PhotoSwipe slideshow */
+.ps-caption
+  display: none !important

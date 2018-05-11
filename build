@@ -1,0 +1,2 @@
+cat js/vendor/jquery-1.9.1.min.js js/vendor/simple-inheritance.min.js js/vendor/code-photoswipe-1.0.11.js > js/vendor.js
+uglifyjs js/main.js -o js/main.min.js

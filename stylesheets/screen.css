@@ -34,6 +34,7 @@ ul,
 ol {
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 h1,
 h3 {
@@ -47,12 +48,12 @@ h1 {
 }
 h1 span {
   font-size: 3.5rem;
-  color: #ff6c00;
+  color: #008000;
   display: block;
   margin-top: -1.9rem;
 }
 .container {
-  border-top: 0.7rem solid #ff6c00;
+  border-top: 0.7rem solid #008000;
   min-width: 290px;
 }
 header {
@@ -211,9 +212,6 @@ main {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
-.projects ul {
-  height: 100%;
-}
 .projects > li {
   width: 100%;
   overflow-y: hidden;
@@ -224,9 +222,10 @@ main {
   padding-top: 1.3rem;
 }
 .project {
+  height: 100%;
   white-space: nowrap;
 }
-.project li {
+.project > li {
   width: 30rem;
   height: 100%;
   display: inline-block;
@@ -239,36 +238,36 @@ main {
   background-position: center;
   margin: 0 0.5rem;
 }
-.project li:hover {
+.project > li:hover {
   cursor: pointer;
 }
-.project li.without-external-link:hover {
+.project > li.without-external-link:hover {
   cursor: initial;
 }
-.project li.text {
+.project > li.text {
   padding: 0;
-  border: 0.4rem solid #ff6c00;
+  border: 0.4rem solid #008000;
   background-image: none;
 }
-.project li.text p a {
+.project > li.text p a {
   color: #696969;
 }
-.project li.text:hover a {
+.project > li.text:hover a {
   color: #4d4d4d;
 }
-.project li.text:hover p {
+.project > li.text:hover p {
   color: #000;
 }
-.project li.text:hover hr {
+.project > li.text:hover hr {
   width: 55%;
 }
-.project li:first-child {
+.project > li:first-child {
   margin-left: 1rem;
 }
-.project li:last-child {
+.project > li:last-child {
   margin-right: 1rem;
 }
-.project li > a {
+.project > li > a {
   width: 100%;
   height: 100%;
   display: block;
@@ -331,6 +330,13 @@ main {
   white-space: normal;
   text-align: center;
   line-height: 2rem;
+}
+ul.sublist {
+  text-align: center;
+  padding-top: 0.2rem;
+}
+ul.sublist li {
+  margin-top: 0.7rem;
 }
 /* Hide toolbar for PhotoSwipe slideshow */
 .ps-caption {
